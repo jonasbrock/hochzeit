@@ -470,19 +470,17 @@ img { max-width: 100%; height: auto; display: block; }
 /* ===== Responsive ===== */
 @media (max-width: 640px) {
   .hero { padding: 5rem 1.5rem 3rem; }
-  .section { padding: 3.5rem 0; }
+  .section { padding: 3rem 0; }
 
-  /* Horizontal scroll timeline on mobile */
+  /* ---- Story: vertical stacked layout on mobile ---- */
   .story { padding-bottom: 2rem; }
 
   .story-timeline {
     display: flex;
-    flex-direction: row;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    scroll-snap-type: x mandatory;
-    gap: 1rem;
-    padding: 0 1rem 1rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 0 1.5rem;
     max-width: 100%;
   }
 
@@ -495,14 +493,13 @@ img { max-width: 100%; height: auto; display: block; }
   }
 
   .story-item {
-    flex: 0 0 200px;
-    width: 200px;
+    width: 100%;
+    max-width: 320px;
     margin-bottom: 0;
     padding: 0;
     text-align: center;
     flex-direction: column;
     align-items: center;
-    scroll-snap-align: center;
   }
 
   .story-left,
@@ -514,6 +511,7 @@ img { max-width: 100%; height: auto; display: block; }
     justify-content: center;
   }
 
+  /* Hide dots on mobile */
   .story-dot,
   .story-left .story-dot,
   .story-right .story-dot,
@@ -523,6 +521,7 @@ img { max-width: 100%; height: auto; display: block; }
     display: none;
   }
 
+  /* Year labels above photos */
   .story-year,
   .story-left .story-year,
   .story-right .story-year {
@@ -533,29 +532,78 @@ img { max-width: 100%; height: auto; display: block; }
     transform: none;
     margin-bottom: 0.5rem;
     font-size: 1.3rem;
+    min-height: 0;
   }
 
-  .story-photo img { height: 180px; width: 200px; }
+  /* Empty year labels collapse */
+  .story-year:empty {
+    display: none;
+  }
 
-  .story-card { width: 200px; }
+  .story-photo img {
+    height: 220px;
+    width: 100%;
+  }
 
-  /* Hide scrollbar but keep scroll */
-  .story-timeline::-webkit-scrollbar { display: none; }
-  .story-timeline { -ms-overflow-style: none; scrollbar-width: none; }
+  .story-card {
+    width: 100%;
+  }
 
-  /* Schedule compact */
-  .timeline { padding-left: 5rem; }
-  .timeline::before { left: 4.5rem; }
-  .timeline-time { left: -5rem; transform: translateX(0); padding-right: 0.75rem; text-align: right; width: 4rem; }
-  .timeline-dot { left: 4.5rem; transform: translateX(-50%); }
+  /* ---- Schedule: clean layout without dots ---- */
+  .timeline {
+    padding-left: 0;
+    max-width: 100%;
+  }
+
+  .timeline::before {
+    display: none;
+  }
+
+  .timeline-item {
+    display: flex;
+    align-items: baseline;
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+    padding: 0.75rem 1rem;
+    background: rgba(168, 181, 162, 0.08);
+    border-radius: 10px;
+  }
+
+  .timeline-dot {
+    display: none;
+  }
+
+  .timeline-time {
+    position: static;
+    transform: none;
+    padding-right: 0;
+    min-width: 3rem;
+    text-align: left;
+    font-size: 0.9rem;
+    flex-shrink: 0;
+  }
+
+  .timeline-content h3 {
+    font-size: 1.1rem;
+  }
+
+  /* ---- Location ---- */
+  .location-hero-img { height: 180px; }
+  .location-info { padding: 1.25rem; }
+  .location-info h3 { font-size: 1.3rem; }
+  .location-transit { font-size: 0.8rem; }
 
   /* Map height */
   .map-embed iframe { height: 250px !important; }
 
-  /* Form stacking */
+  /* ---- Dresscode ---- */
+  .dresscode { margin-top: 2rem; padding: 1.25rem 1rem; }
+  .dresscode-icon { width: 40px; height: 40px; }
+
+  /* ---- Form stacking ---- */
   .form-row { flex-direction: column; gap: 1rem; }
 
-  /* Touch-friendly inputs */
+  /* Touch-friendly inputs (min 16px prevents iOS zoom) */
   .form-group input[type="text"],
   .form-col input[type="text"],
   .form-group textarea {
@@ -568,10 +616,14 @@ img { max-width: 100%; height: auto; display: block; }
     font-size: 1rem;
   }
 
-  /* Mobile font sizes */
-  .invitation-text { font-size: 1.1rem; }
-  .dresscode { margin-top: 2rem; padding: 1.25rem 1rem; }
-  .location-hero-img { height: 180px; }
+  /* ---- Typography ---- */
+  .invitation-text { font-size: 1.1rem; line-height: 1.8; }
+  .rsvp-deadline { font-size: 0.85rem; margin-bottom: 2rem; }
 
+  /* ---- Footer ---- */
+  .footer { padding: 2rem 0; }
+  .footer p { font-size: 1rem; }
+
+  /* ---- Lang toggle ---- */
   .lang-toggle { top: 1rem; right: 1rem; }
 }
