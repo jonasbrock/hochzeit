@@ -182,7 +182,7 @@ const translations = {
     pt: 'Algo deu errado. Por favor, tente novamente.',
   },
   footerText: {
-    de: 'Wir freuen uns auf euch! \u2665 Berit & Jonas',
+    de: 'Wir freuen uns auf Euch! \u2665 Berit & Jonas',
     pt: 'Estamos ansiosos para v\u00ea-los! \u2665 Berit & Jonas',
   }
 };
