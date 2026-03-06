@@ -114,8 +114,8 @@ const translations = {
     pt: 'Confirma\u00e7\u00e3o',
   },
   rsvpDeadline: {
-    de: 'Bitte meldet euch bis zum 31. M\u00e4rz 2026 an',
-    pt: 'Por favor, confirmem at\u00e9 31 de mar\u00e7o de 2026',
+    de: 'Bitte meldet Euch bis zum 30. April 2026 an',
+    pt: 'Por favor, confirmem at\u00e9 30 de abril de 2026',
   },
   rsvpVornameLabel: {
     de: 'Vorname',
@@ -134,16 +134,16 @@ const translations = {
     pt: 'Sobrenome',
   },
   rsvpAttendanceLabel: {
-    de: 'Kommt ihr?',
-    pt: 'Voc\u00eas v\u00eam?',
+    de: 'Wer kommt?',
+    pt: 'Quem vem?',
   },
   rsvpYes: {
-    de: 'Wir kommen gerne!',
-    pt: 'Estaremos presentes!',
+    de: 'Dabei',
+    pt: 'Presente',
   },
   rsvpNo: {
-    de: 'Leider k\u00f6nnen wir nicht',
-    pt: 'Infelizmente n\u00e3o poderemos ir',
+    de: 'Leider nicht dabei',
+    pt: 'Infelizmente n\u00e3o',
   },
   rsvpGuestsCountLabel: {
     de: 'Wie viele Personen kommen insgesamt?',
@@ -256,6 +256,7 @@ attendanceRadios.forEach(radio => {
       stepperValue.textContent = '1';
       guestNamesContainer.innerHTML = '';
     }
+    validateForm();
   });
 });
 
@@ -281,6 +282,7 @@ function renderGuestNameFields() {
   if (guestCount <= 1) {
     guestNamesGroup.style.display = 'none';
     guestNamesContainer.innerHTML = '';
+    validateForm();
     return;
   }
 
@@ -315,13 +317,49 @@ function renderGuestNameFields() {
     row.appendChild(input);
     guestNamesContainer.appendChild(row);
   }
+  validateForm();
 }
+
+// Form validation — enable submit only when required fields are filled
+const submitBtn = rsvpForm.querySelector('.btn-submit');
+submitBtn.disabled = true;
+
+function validateForm() {
+  const vorname = document.getElementById('rsvp-vorname').value.trim();
+  const nachname = document.getElementById('rsvp-nachname').value.trim();
+  const attendanceChecked = document.querySelector('input[name="attendance"]:checked');
+
+  if (!vorname || !nachname || !attendanceChecked) {
+    submitBtn.disabled = true;
+    return;
+  }
+
+  // If attending with extra guests, all guest names must be filled
+  if (attendanceChecked.value === 'yes' && guestCount > 1) {
+    const guestInputs = guestNamesContainer.querySelectorAll('input');
+    for (const input of guestInputs) {
+      if (!input.value.trim()) {
+        submitBtn.disabled = true;
+        return;
+      }
+    }
+  }
+
+  submitBtn.disabled = false;
+}
+
+// Listen for input changes on main fields
+document.getElementById('rsvp-vorname').addEventListener('input', validateForm);
+document.getElementById('rsvp-nachname').addEventListener('input', validateForm);
+attendanceRadios.forEach(radio => radio.addEventListener('change', validateForm));
+
+// Also validate when guest name fields change (delegated)
+guestNamesContainer.addEventListener('input', validateForm);
 
 // Form submission
 rsvpForm.addEventListener('submit', async (e) => {
   e.preventDefault();
 
-  const submitBtn = rsvpForm.querySelector('.btn-submit');
   submitBtn.disabled = true;
   submitBtn.textContent = '...';
 

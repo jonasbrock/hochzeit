@@ -205,6 +205,9 @@ img { max-width: 100%; height: auto; display: block; }
   stroke-width: 2;
 }
 
+/* Mobile curved connector — hidden on desktop */
+.story-curve-mobile { display: none; }
+
 /* ===== Sections ===== */
 .section { padding: 5rem 0; }
 
@@ -227,9 +230,9 @@ img { max-width: 100%; height: auto; display: block; }
 .invitation { text-align: center; background: var(--cream); }
 .invitation-text {
   font-family: var(--font-serif);
-  font-size: clamp(1.15rem, 2.5vw, 1.4rem);
+  font-size: clamp(1.35rem, 3vw, 1.7rem);
   line-height: 2; color: var(--text-light);
-  max-width: 540px; margin: 0 auto; font-weight: 400;
+  max-width: 580px; margin: 0 auto; font-weight: 400;
 }
 
 /* ===== Schedule ===== */
@@ -492,6 +495,19 @@ img { max-width: 100%; height: auto; display: block; }
     display: none;
   }
 
+  /* Mobile curved timeline connector */
+  .story-curve-mobile {
+    display: block;
+    width: 40px;
+    height: 60px;
+    flex-shrink: 0;
+  }
+  .story-curve-mobile path {
+    fill: none;
+    stroke: var(--sage-light);
+    stroke-width: 2;
+  }
+
   .story-item {
     width: 100%;
     max-width: 320px;
@@ -617,7 +633,7 @@ img { max-width: 100%; height: auto; display: block; }
   }
 
   /* ---- Typography ---- */
-  .invitation-text { font-size: 1.1rem; line-height: 1.8; }
+  .invitation-text { font-size: 1.25rem; line-height: 1.9; }
   .rsvp-deadline { font-size: 0.85rem; margin-bottom: 2rem; }
 
   /* ---- Footer ---- */
