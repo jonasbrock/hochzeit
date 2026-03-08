@@ -98,7 +98,7 @@ const translations = {
     pt: 'Dependendo do clima, ser\u00e1 poss\u00edvel ir para o jardim ao ar livre.',
   },
   geschenkeText: {
-    de: 'Wir sind wunschlos gl\u00fccklich. Dass Ihr den Weg auf Euch nehmt, um mit uns zu feiern, ist Geschenk genug.',
+    de: 'Wir sind wunschlos gl\u00fccklich. Dass Ihr den Weg auf Euch nehmt, um mit uns zu feiern, ist uns Geschenk genug.',
     pt: 'Estamos felizes e n\u00e3o precisamos de nada. Que voc\u00eas fa\u00e7am o caminho para celebrar conosco j\u00e1 \u00e9 presente suficiente.',
   },
   locationTitle: {
@@ -118,7 +118,7 @@ const translations = {
     pt: 'Confirma\u00e7\u00e3o',
   },
   rsvpDeadline: {
-    de: 'Bitte meldet Euch bis zum 30. April 2026 an',
+    de: 'Bitte meldet Euch bis zum 30. April 2026',
     pt: 'Por favor, confirmem at\u00e9 30 de abril de 2026',
   },
   rsvpVornameLabel: {
