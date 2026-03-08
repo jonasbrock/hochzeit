@@ -97,6 +97,10 @@ const translations = {
     de: 'Je nach Wetter wird es m\u00f6glich sein, nach drau\u00dfen in den Garten zu gehen.',
     pt: 'Dependendo do clima, ser\u00e1 poss\u00edvel ir para o jardim ao ar livre.',
   },
+  geschenkeTitle: {
+    de: 'Geschenke',
+    pt: 'Presentes',
+  },
   geschenkeText: {
     de: 'Wir w\u00fcnschen uns keine Geschenke. Dass Ihr den Weg auf Euch nehmt, um mit uns zu feiern, ist Geschenk genug.',
     pt: 'N\u00e3o desejamos presentes. Que voc\u00eas fa\u00e7am o caminho para celebrar conosco j\u00e1 \u00e9 presente suficiente.',
