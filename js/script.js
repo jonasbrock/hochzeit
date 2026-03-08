@@ -66,8 +66,8 @@ const translations = {
     pt: 'Programa',
   },
   scheduleItem0Title: {
-    de: '\u2003\u2003Treffen',
-    pt: '\u2003\u2003Encontro',
+    de: '\u2003\u2003Ankommen',
+    pt: '\u2003\u2003Chegada',
   },
   scheduleItem1Title: {
     de: '\u2003\u2003Gottesdienst',
@@ -98,8 +98,8 @@ const translations = {
     pt: 'Dependendo do clima, ser\u00e1 poss\u00edvel ir para o jardim ao ar livre.',
   },
   geschenkeText: {
-    de: 'Wir w\u00fcnschen uns keine Geschenke. Dass Ihr den Weg auf Euch nehmt, um mit uns zu feiern, ist Geschenk genug.',
-    pt: 'N\u00e3o desejamos presentes. Que voc\u00eas fa\u00e7am o caminho para celebrar conosco j\u00e1 \u00e9 presente suficiente.',
+    de: 'Wir sind wunschlos gl\u00fccklich. Dass Ihr den Weg auf Euch nehmt, um mit uns zu feiern, ist Geschenk genug.',
+    pt: 'Estamos felizes e n\u00e3o precisamos de nada. Que voc\u00eas fa\u00e7am o caminho para celebrar conosco j\u00e1 \u00e9 presente suficiente.',
   },
   locationTitle: {
     de: 'Ort',
@@ -110,8 +110,8 @@ const translations = {
     pt: 'A festa tamb\u00e9m acontecer\u00e1 na igreja.',
   },
   locationTransit: {
-    de: 'Gut erreichbar mit U-Bahn und Bus \u2014 Haltestelle Leopoldplatz',
-    pt: 'F\u00e1cil acesso por metr\u00f4 e \u00f4nibus \u2014 esta\u00e7\u00e3o Leopoldplatz',
+    de: 'Gut erreichbar mit U-Bahn und Bus \u2014 Haltestelle Leopoldplatz (U6 und U9)',
+    pt: 'F\u00e1cil acesso por metr\u00f4 e \u00f4nibus \u2014 esta\u00e7\u00e3o Leopoldplatz (U6 e U9)',
   },
   rsvpTitle: {
     de: 'Zusage',
