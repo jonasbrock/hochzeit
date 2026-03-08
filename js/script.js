@@ -66,28 +66,28 @@ const translations = {
     pt: 'Programa',
   },
   scheduleItem0Title: {
-    de: 'Treffen',
-    pt: 'Encontro',
+    de: '\u2003\u2003Treffen',
+    pt: '\u2003\u2003Encontro',
   },
   scheduleItem1Title: {
-    de: 'Gottesdienst',
-    pt: 'Cerim\u00f4nia',
+    de: '\u2003\u2003Gottesdienst',
+    pt: '\u2003\u2003Cerim\u00f4nia',
   },
   scheduleItem2Title: {
-    de: 'Ansto\u00dfen',
-    pt: 'Brinde',
+    de: '\u2003\u2003Ansto\u00dfen',
+    pt: '\u2003\u2003Brinde',
   },
   scheduleItem3Title: {
-    de: 'Kaffee und Kuchen',
-    pt: 'Caf\u00e9 e bolo',
+    de: '\u2003\u2003Kaffee und Kuchen',
+    pt: '\u2003\u2003Caf\u00e9 e bolo',
   },
   scheduleItem4Title: {
-    de: 'Abendessen mit Buffet',
-    pt: 'Jantar com buffet',
+    de: '\u2003\u2003Abendessen mit Buffet',
+    pt: '\u2003\u2003Jantar com buffet',
   },
   scheduleItem5Title: {
-    de: 'Gem\u00fctliches Beisammensein',
-    pt: 'Momento de conviv\u00eancia',
+    de: '\u2003\u2003Gem\u00fctliches Beisammensein',
+    pt: '\u2003\u2003Momento de conviv\u00eancia',
   },
   dresscodeText: {
     de: 'Dresscode: sommerlich entspannt',

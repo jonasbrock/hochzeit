@@ -309,6 +309,7 @@ img { max-width: 100%; height: auto; display: block; }
   font-size: 0.9rem;
   color: var(--text-soft);
   font-weight: 400;
+  font-style: normal;
   max-width: 480px;
   margin: 0 auto;
 }
