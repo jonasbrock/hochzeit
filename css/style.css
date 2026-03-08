@@ -265,7 +265,7 @@ img { max-width: 100%; height: auto; display: block; }
   border-radius: 50%; transform: translateX(-50%);
 }
 .timeline-content {
-  padding-left: 3rem;
+  padding-left: 4.5rem;
 }
 .timeline-content h3 {
   font-family: var(--font-serif); font-size: 1.2rem;
@@ -302,22 +302,8 @@ img { max-width: 100%; height: auto; display: block; }
 /* ===== Geschenke ===== */
 .geschenke {
   text-align: center;
-  margin-top: 3rem;
+  margin-top: 2.5rem;
   padding: 1.5rem 2rem;
-}
-.geschenke-icon {
-  display: block;
-  margin: 0 auto 0.75rem;
-  width: 48px;
-  height: 48px;
-  color: var(--accent);
-}
-.geschenke-title {
-  font-family: var(--font-serif);
-  font-size: 1.15rem;
-  font-weight: 600;
-  color: var(--text);
-  margin-bottom: 0.4rem;
 }
 .geschenke-text {
   font-size: 0.9rem;
